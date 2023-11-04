@@ -1,37 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Accordion from "./component/Accordion/Accordion";
 import { UncontrolledAccordion } from './component/Accordion/UnControlledAccordion';
 import { OnOff } from './component/OnOff/OnOff';
-import { Reating } from "./component/Reating/Reating";
+import { UnControledOnOff } from './component/OnOff/UnControledOnOff';
+import { Reating, ReatingValueType } from "./component/Reating/Reating";
 import { UnControlledReating } from './component/Reating/UnControlledReating';
 
-function sum(a: number, b: number) {
-    alert(a + b)
-}
+
 
 function App() {
+
+    let [reatingValue, setReatingValue] = useState<ReatingValueType>(0)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
+    let [swichOn, setswichOn] = useState(false)
+
     console.log('App rendering')
     return (
         <div className="App">
-            {/* <PageTitle title={'This is APP component'} />
-            <PageTitle title={'My friendf'} />
-            <Reating value={0} />
-            <Reating value={1} />
-            <Reating value={2} />
-            <Reating value={3} />
-            <Reating value={4} />
-            <Reating value={5} />
-
-            <Accordion titleValue={'World'} 
-            collapsed={true} />
-            <Accordion titleValue={'Hello'} 
-            collapsed={false} /> */}
-            <UncontrolledAccordion titleValue='dd'/>
-            <UnControlledReating/>
-            <Reating value={4} />
-            <OnOff  />
-            <OnOff  />
+            <UncontrolledAccordion titleValue='This is Title' />
+            <Accordion titleValue='Tix us Title Accordion'
+                onChange={() => setAccordionCollapsed(!accordionCollapsed)}
+                collapsed={accordionCollapsed} />
+            <Reating value={4} onClick={setReatingValue} />
+            <UnControlledReating />
+            <OnOff on={swichOn} onChange={setswichOn}/>
+            <UnControledOnOff onChange={setswichOn}/>{swichOn.toString()}
+            {/* <OnOff on={on} onChange={setOn}/> */}
 
         </div>
     );
