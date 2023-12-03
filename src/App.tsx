@@ -19,9 +19,10 @@ function App() {
     return (
         <div className="App">
             <UncontrolledAccordion titleValue='This is Title' />
-            <Accordion titleValue='Tix us Title Accordion'
+            <Accordion titleValue='Tix us Title Accordion' item={[{title: 'Tom', value: 1}, {title:"Ann", value: 2}]}
                 onChange={() => setAccordionCollapsed(!accordionCollapsed)}
-                collapsed={accordionCollapsed} />
+                collapsed={accordionCollapsed}   onClick={()=>{}}
+                />
             <Reating value={4} onClick={setReatingValue} />
             <UnControlledReating />
             <OnOff on={swichOn} onChange={setswichOn} />
