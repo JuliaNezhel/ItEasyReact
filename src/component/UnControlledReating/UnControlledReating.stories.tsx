@@ -7,7 +7,7 @@ export default {
 }
 
 export const UnControlledReatingMode = () => (<UnControlledReating />)
-export const EmptyReating = () => (<UnControlledReating  defaultValue={5} />)
-export const Reating1 = () => (<UnControlledReating  defaultValue={1} />)
+export const EmptyReating = () => (<UnControlledReating defaultValue={5} />)
+export const Reating1 = () => (<UnControlledReating defaultValue={1} />)
 export const Reating2 = () => (<UnControlledReating defaultValue={2} />)
 export const Reating3 = () => (<UnControlledReating defaultValue={3} />)

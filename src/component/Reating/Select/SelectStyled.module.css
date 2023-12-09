@@ -1,0 +1,19 @@
+/* .select{
+    border: 1px solid rgb(3, 22, 73);
+} */
+
+.select.main{
+    border: 1px solid rgb(3, 22, 73);
+    display: inline-block;
+    min-height: 40px;
+}
+.item{
+    border: 1px solid black;
+    position: absolute;
+    padding: 5px;
+    /* display: none; */
+}
+
+/* .select.active .item {
+    display: block; 
+}  */
