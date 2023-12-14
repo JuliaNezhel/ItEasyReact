@@ -1,5 +1,7 @@
 import { log } from "console";
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
+import { action } from '@storybook/addon-actions';
+import { reduser } from './reduser';
 
 
 type UncontrolledAccordionPropsType = {
@@ -7,18 +9,34 @@ type UncontrolledAccordionPropsType = {
     // collapsed: boolean
 }
 
+// type ActionType = {
+//     type: string
+// }
+
+// const reduser = (state: boolean, action: ActionType) => {
+
+//     if(action.type === 'TOGGLE_CLLAPSED'){
+//         return !state
+//     }
+//  return state
+// }
+
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
     console.log('Accordion rendering')
 
-    let [collapsed ,setCollapsed] = useState(false)
+    // let [collapsed ,setCollapsed] = useState(false)
 
-    const onClicHandler = ()=>(setCollapsed(!collapsed))
+    let [state, dispatch] = useReducer(reduser, {collapsed: false})
 
-    console.log(collapsed)
+    // const onClicHandler = ()=>(setCollapsed(!collapsed))
+    const onClicHandler = ()=>(dispatch({type: 'TOGGLE_CLLAPSED'} ))
+
+    console.log(state.collapsed)
     return <div>
         <AccordionTitle title={props.titleValue} onClicHandler={onClicHandler}/>
         {/* <button onClick={onClicHandler}>TOGGLE</button> */}
-        {!collapsed && <AccordionBody />}
+        
+        {!state.collapsed && <AccordionBody />}
     </div>
 
 }

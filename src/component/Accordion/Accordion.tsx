@@ -14,6 +14,8 @@ type AccordionPropsType = {
     onClick: (value: any) => void
 }
 
+// const reduser = ()
+
 export function Accordion(props: AccordionPropsType) {
     console.log('Accordion rendering')
 
