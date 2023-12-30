@@ -37,6 +37,25 @@ export const Select = (props: SelectPropsType) => {
                         >{i.title}</div>)}
                     </div>
                 }
+
+                <div className={style.select} onKeyPress={() => { console.log('press') }}>
+                    {/* <span className={style.main} onClick={toggleItems}> */}
+                        {/* {selectedItem && selectedItem.title} </span> */}
+                    {/* {
+                        active &&
+                        <div className={style.item}>
+                            {props.item.map(i => <div
+                                onMouseEnter={() => { setHoverRlemenyValue(i.value) }}
+                                className={style.item + ' ' + (hoveredItem === i? style.selected : '')}
+                                key={i.value}
+                                onClick={() => {
+                                    {onItemClick(i.value)}
+                                    
+                                }}
+                            >{i.title}</div>)}
+                        </div>
+                    } */}
+                </div>
             </div>
 
         </div>
