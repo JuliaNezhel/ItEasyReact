@@ -15,7 +15,7 @@ function App() {
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
     let [swichOn, setswichOn] = useState(false)
 
-    console.log('App rendering')
+    console.log('App')
     return (
         <div className="App">
             <UncontrolledAccordion titleValue='This is Title' />
