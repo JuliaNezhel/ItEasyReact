@@ -7,9 +7,11 @@
     border-radius: 5px;
     margin: 5px;
 }
+
 .clock .digital-clock {
     padding: 10px;
 }
+
 .clock .analogClock {
     width: 100px;
     height: 100px;
@@ -18,6 +20,7 @@
     position: relative;
     background: #fff;
 }
+
 .clock .analogClock .dial {
     position: absolute;
     left: 50%;
@@ -25,12 +28,15 @@
     height: 50px;
     transform-origin: bottom left;
 }
+
 .clock .analogClock .dial.seconds {
     border-left: solid 1px green;
 }
+
 .clock .analogClock .dial.minutes {
     border-left: solid 1px #c00;
 }
+
 .clock .analogClock .dial.hours {
     width: 35px;
     height: 35px;

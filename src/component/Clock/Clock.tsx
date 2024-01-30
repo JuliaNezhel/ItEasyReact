@@ -1,7 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { DigitalClockView } from "./DigitalClockView";
-import { AnalogClockView } from "./AnalogClockView";
+import {useState, useEffect} from "react";
+import {DigitalClockView} from "./DigitalClockView";
+import {AnalogClockView} from "./AnalogClockView";
 
 type PropsType = {
   mode?: "analog" | "digital";

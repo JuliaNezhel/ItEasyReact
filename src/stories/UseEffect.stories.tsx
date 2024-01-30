@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 
 export default {
   title: "useEffect demo",
@@ -95,7 +95,7 @@ export const KeysTrackerExmple = () => {
     };
     window.document.addEventListener("keypress", handler);
     return () => {
-        window.document.addEventListener("keypress", handler);        
+      window.document.addEventListener("keypress", handler);
     }
   }, []);
 
